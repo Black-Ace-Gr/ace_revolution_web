@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="styles/style.css">
 <link rel="icon" href="assets/logo.png">
 
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -47,14 +46,14 @@
     </p>
 
     <div class="hero-actions">
-      <a class="btn">Start a Project</a>
-      <a class="btn-outline">View Work</a>
+      <a class="btn" href="#contact">Start a Project</a>
+      <a class="btn-outline" href="#work">View Work</a>
     </div>
 
   </div>
 
   <div class="hero-right">
-    <div class="orb"></div>
+    <div class="orb">bo</div>
   </div>
 
 </section>
@@ -328,30 +327,6 @@
     <a href="/terms.html">Terms of Service</a>
   </p>
 </footer>
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const details = document.getElementById("details").value;
-
-    const message =
-`Hello Ace Revolution,
-
-Name: ${name}
-Email: ${email}
-
-Project Details:
-${details}`;
-
-    const whatsappURL =
-        `https://wa.me/254116316948?text=${encodeURIComponent(message)}`;
-
-    window.open(whatsappURL, "_blank");
-});
-</script>
-
 <script src="scripts/app.js"></script>
 </body>
 </html>

@@ -9,3 +9,25 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
     this.reset();
   });
 });
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const details = document.getElementById("details").value;
+
+    const message =
+`Hello Ace Revolution,
+
+Name: ${name}
+Email: ${email}
+
+Project Details:
+${details}`;
+
+    const whatsappURL =
+        `https://wa.me/254116316948?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank", "noopener, noreferrer");
+});
